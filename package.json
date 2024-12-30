@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "sass-dev": "sass --watch --update --style=expanded SCSS:CSS"
+  },
+  "dependencies": {
+    "sass-dev": "^1.0.13"
+  }
+}
