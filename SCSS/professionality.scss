@@ -24,17 +24,20 @@ a {
 
 body {
   background-color: var(--white-main);
+  overflow-x: hidden;
 }
 
 /* ------------Start Of Navbar------------ */
 .navbar {
   width: 100%;
-  height: 10dvh;
-  padding: .2rem 10rem;
+  min-height: 10dvh;
+  padding: .5rem 10rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-color: var(--blue-sub);
+  flex-wrap: wrap;
+  gap: 1.25rem;
 }
 
 .logo {
@@ -46,6 +49,7 @@ body {
 
 .links {
   position: relative;
+  text-align: center;
 }
 
 .links::before {
@@ -153,10 +157,11 @@ body {
     .row {
       position: relative;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
       gap: 1rem;
       align-items: center;
       padding: 0.25rem 0.5rem;
+
 
       &::after {
         content: "";
@@ -199,5 +204,55 @@ body {
         border-radius: 50px;
       }
     }
+  }
+}
+
+.card:nth-child(1) {
+  .row {
+    text-align: center;
+  }
+}
+
+/* ------------------MEDIA 1--------------------- */
+@media only screen and (max-width: 800px) {
+  .card {
+    width: 96%;
+  }
+}
+
+/* ------------------MEDIA 2--------------------- */
+@media only screen and (max-width: 700px) {
+  .navbar {
+    padding: 0.2rem 0;
+  }
+
+  .links {
+    font-size: 1.65rem;
+  }
+
+  .reflection__textContainer {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+
+  .card {
+    width: 98%;
+    padding: .75rem 3rem;
+  }
+
+  .row {
+    min-width: fit-content;
+  }
+}
+
+/* ------------------MEDIA 3--------------------- */
+
+
+@media only screen and (max-width: 500px) {
+
+
+  .reflection__textContainer {
+    width: 80%;
+    font-size: 1.2rem;
   }
 }

@@ -30,12 +30,14 @@ body {
 /* ------------Start Of Navbar------------ */
 .navbar {
   width: 100%;
-  height: 10dvh;
-  padding: .2rem 10rem;
+  min-height: 10dvh;
+  padding: .5rem 10rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-color: var(--blue-sub);
+  flex-wrap: wrap;
+  gap: 1.25rem;
 }
 
 .logo {
@@ -47,6 +49,7 @@ body {
 
 .links {
   position: relative;
+  text-align: center;
 }
 
 .links::before {
@@ -81,6 +84,16 @@ body {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
   transition: all .2s ease-in-out;
 
+  @media screen and (max-width: 700px) {
+    width: 90vw;
+    font-size: 1.5rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 98vw;
+  }
+
+
   &:hover {
     background-color: var(--blue-medre);
   }
@@ -106,5 +119,29 @@ body {
 .flex {
   display: flex;
   align-items: stretch;
+  flex-wrap: wrap;
   justify-content: space-between;
+
+  @media screen and (max-width: 520px) {
+    margin-bottom: 1rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* ------------------MEDIA 1--------------------- */
+@media only screen and (max-width: 700px) {
+  .navbar {
+    padding: 0.2rem 0;
+  }
+
+  .links {
+    font-size: 1.65rem;
+  }
+
+  .reflection__textContainer {
+    width: 80%;
+    font-size: 1.2rem;
+  }
 }

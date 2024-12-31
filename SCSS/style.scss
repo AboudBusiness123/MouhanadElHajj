@@ -24,18 +24,19 @@ a {
 
 body {
   background-color: var(--white-main);
-  overflow: hidden;
 }
 
 /* ------------Start Of Navbar------------ */
 .navbar {
   width: 100%;
-  height: 10dvh;
-  padding: .2rem 10rem;
+  min-height: 10dvh;
+  padding: .5rem 10rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-color: var(--blue-sub);
+  flex-wrap: wrap;
+  gap: 1.25rem;
 }
 
 .logo {
@@ -47,6 +48,7 @@ body {
 
 .links {
   position: relative;
+  text-align: center;
 }
 
 .links::before {
@@ -72,15 +74,20 @@ body {
 
 .hero {
   height: 90dvh;
-  padding: 0 10vw;
+  padding: 0 5vw;
+  padding-top: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
   background-color: var(--white-main);
+  overflow-x: hidden;
+
 }
 
 .hero__imageContainer {
   width: 30dvw;
+  min-width: 200px;
   border-radius: 500px;
   margin-right: 2rem;
   animation: fadeToRight 1s ease-out;
@@ -133,7 +140,9 @@ body {
 }
 
 .hero__description {
+  text-wrap: wrap !important;
   width: 60ch;
+  max-width: 90vw;
   line-height: 26px;
   font-size: 1.4rem;
 }
@@ -183,7 +192,7 @@ body {
   }
 
   .links {
-    font-size: 1.2rem;
+    font-size: 1.65rem;
   }
 
   .reflection__textContainer {
@@ -194,9 +203,7 @@ body {
 
 /* ------------------MEDIA 2--------------------- */
 @media only screen and (max-width: 500px) {
-  .links {
-    font-size: .8rem;
-  }
+
 
   .reflection__textContainer {
     width: 80%;
